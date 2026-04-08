@@ -8,64 +8,7 @@
 
 Berikut adalah gambaran alur sistem:
 
-<svg width="900" height="600" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .box { fill: #0f172a; stroke: #38bdf8; stroke-width: 2; rx: 10; }
-    .text { fill: #e2e8f0; font-family: Arial, sans-serif; font-size: 14px; text-anchor: middle; }
-    .title { font-size: 16px; font-weight: bold; }
-    .arrow { stroke: #94a3b8; stroke-width: 2; marker-end: url(#arrowhead); }
-  </style>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
-    refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"/>
-    </marker>
-  </defs>
-
-  <!-- Client -->
-  <rect x="350" y="20" width="200" height="50" class="box"/>
-  <text x="450" y="50" class="text title">Client</text>
-
-  <!-- Cloudflare -->
-  <rect x="350" y="100" width="200" height="50" class="box"/>
-  <text x="450" y="130" class="text title">Cloudflare</text>
-
-  <!-- Traefik -->
-  <rect x="350" y="180" width="200" height="50" class="box"/>
-  <text x="450" y="210" class="text title">Traefik</text>
-  <text x="450" y="225" class="text">(Reverse Proxy + SSL)</text>
-
-  <!-- Docker Network Container -->
-  <rect x="150" y="260" width="600" height="300" fill="none" stroke="#38bdf8" stroke-width="2" rx="15"/>
-  <text x="450" y="280" class="text title">Docker Network</text>
-
-  <!-- Services -->
-  <rect x="200" y="300" width="200" height="50" class="box"/>
-  <text x="300" y="330" class="text">Laravel App</text>
-
-  <rect x="500" y="300" width="200" height="50" class="box"/>
-  <text x="600" y="330" class="text">Queue Worker</text>
-
-  <rect x="200" y="380" width="200" height="50" class="box"/>
-  <text x="300" y="410" class="text">Scheduler</text>
-
-  <rect x="500" y="380" width="200" height="50" class="box"/>
-  <text x="600" y="410" class="text">Redis</text>
-
-  <rect x="200" y="460" width="200" height="50" class="box"/>
-  <text x="300" y="490" class="text">MinIO</text>
-
-  <rect x="500" y="460" width="200" height="50" class="box"/>
-  <text x="600" y="490" class="text">Database</text>
-
-  <!-- Arrows -->
-  <line x1="450" y1="70" x2="450" y2="100" class="arrow"/>
-  <line x1="450" y1="150" x2="450" y2="180" class="arrow"/>
-  <line x1="450" y1="230" x2="450" y2="260" class="arrow"/>
-
-</svg>
-
+![Architecture](./architecture.svg)
 
 ---
 
